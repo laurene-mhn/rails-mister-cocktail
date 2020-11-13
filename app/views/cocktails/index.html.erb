@@ -1,26 +1,13 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://images-na.ssl-images-amazon.com/images/I/511Uh-pXyjL._AC_SX466_.jpg" %>
-    Lady Cocktail
-  <% end %>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Create a cocktail", new_cocktail_path, class: "nav-link btn btn-success" %>
-      </li>
-    </ul>
-  </div>
-</div>
-
 <div class="container mt-3">
   <h1 class="text-center mb-3">Cocktails</h1>
-  <div class="cards d-flex justify-content-between">
-    <% @cocktails.each do |cocktail| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img.cuisineaz.com/1280x720/2013-12-20/i14978-recette-de-mojito.jpeg)">
-        <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
-      </div>
-    <% end %>
-  </div>
+    <div class="cards d-flex justify-content">
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail_path(cocktail) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img.cuisineaz.com/1280x720/2013-12-20/i14978-recette-de-mojito.jpeg)">
+            <%= cocktail.name.capitalize %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   <%#= link_to "Create your cocktail", new_cocktail_path  %>
 </div>

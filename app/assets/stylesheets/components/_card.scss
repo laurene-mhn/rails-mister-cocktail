@@ -4,11 +4,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   background-size: cover;
   background-position: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
   a {
     text-decoration: none;
     color: white;
@@ -16,12 +21,6 @@
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
 }
 
 // Smallest device

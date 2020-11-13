@@ -12,6 +12,19 @@
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <%= image_tag "https://images-na.ssl-images-amazon.com/images/I/511Uh-pXyjL._AC_SX466_.jpg" %>
+        Lady Cocktail
+      <% end %>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "Create a cocktail", new_cocktail_path, class: "btn-ghost" %>
+          </li>
+        </ul>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
