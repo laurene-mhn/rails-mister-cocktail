@@ -1,4 +1,5 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.cuisineaz.com/1280x720/2013-12-20/i14978-recette-de-mojito.jpeg);">
+<%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.cuisineaz.com/1280x720/2013-12-20/i14978-recette-de-mojito.jpeg);"> %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= @cocktail.photo.attached? ? cl_image_path(@cocktail.photo.key, crop: :fill) : "https://img.cuisineaz.com/1280x720/2013-12-20/i14978-recette-de-mojito.jpeg" %>');">
   <div class="container">
     <h1><%= @cocktail.name.capitalize %></h1>
   </div>
